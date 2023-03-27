@@ -1,0 +1,1091 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+@import "/fonts/persian/IranNastaliq/persian-font.css";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+:root {
+  font-size: calc(0.9vh + 0.1vw + 0.1rem);
+  font-family: "Quicksand";
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60rem auto 32rem;
+  grid-template-areas: "head" "main-content" "foot";
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(246, 246, 246, 0.953);
+}
+
+a {
+  text-decoration: none;
+  color: #fbeaeb;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.profile-item:hover h2,
+.profile-item:hover strong {
+  color: white !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes home-arrow-down {
+  0% {
+    transform: translate3d(0, 0px, 0);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  10% {
+    transform: translate3d(0, 5px, 0);
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 30px, 0);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+main.main-container section#about div#content-about .right p {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+header {
+  grid-area: head;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 3rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/header-bg-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+header nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 6rem;
+  color: white;
+  margin: auto;
+}
+header nav .nav-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Varela";
+  position: relative;
+}
+header nav .nav-container #logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+header nav .nav-container #logo #lang {
+  border-radius: 100%;
+  height: 100%;
+  border: 3px solid #eea47f;
+  width: 4rem;
+  height: 4rem;
+}
+header nav .nav-container .navbar-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  flex-grow: 2;
+}
+@media screen and (max-width: 912px) {
+  header nav .nav-container .navbar-menu {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0;
+    right: -12%;
+    margin-top: 6rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+  }
+}
+header nav .nav-container .navbar-menu li {
+  height: 100%;
+  padding: 2rem 0.6rem;
+  transition: all 0.6s ease;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+header nav .nav-container .navbar-menu li a {
+  height: 100%;
+  color: white;
+  font-size: 1.8rem;
+}
+header nav .nav-container .navbar-menu li:hover {
+  border-bottom: 5px solid #eea47f;
+  background-color: rgb(0, 0, 0);
+  padding: 2rem 0.6rem;
+}
+header nav .nav-container .navbar-menu li:hover a {
+  color: #eea47f;
+}
+header nav .nav-container .navactive {
+  display: block;
+}
+header nav .nav-container .hideicon {
+  display: none;
+}
+header nav .nav-container #expand-icon {
+  display: none;
+}
+@media screen and (max-width: 912px) {
+  header nav .nav-container #expand-icon {
+    display: inline;
+    position: relative;
+  }
+}
+header nav .nav-container #expand-icon:hover {
+  cursor: pointer;
+}
+header nav .nav-container #minimize-icon {
+  display: none;
+}
+header section.hero {
+  height: 49rem;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fbeaeb;
+  text-align: center;
+  gap: 2.5rem;
+  padding: 2rem 4rem;
+}
+header section.hero p#line1 {
+  font-size: 2.4rem;
+  font-family: "Playfair Display", serif;
+}
+@media screen and (max-width: 370px) {
+  header section.hero p#line1 {
+    font-size: 1.8rem;
+  }
+}
+header section.hero h1#line-emp {
+  font-size: 5rem;
+  font-weight: 400;
+  font-family: "Oleo Script", cursive;
+}
+header section.hero h1#line-emp span.emph {
+  color: #eea47f;
+}
+@media screen and (max-width: 730px) {
+  header section.hero h1#line-emp {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 588px) {
+  header section.hero h1#line-emp {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 518px) {
+  header section.hero h1#line-emp {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 478px) and (min-width: 433px) {
+  header section.hero h1#line-emp {
+    font-size: 2.9rem;
+  }
+}
+@media (max-width: 440px) and (min-width: 433px) {
+  header section.hero h1#line-emp {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 432px) {
+  header section.hero h1#line-emp {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  header section.hero h1#line-emp {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 383px) {
+  header section.hero h1#line-emp {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  header section.hero h1#line-emp {
+    font-size: 2.3rem;
+  }
+}
+header section.hero span#line-btn {
+  color: #eea47f;
+  font-size: 2.4rem;
+  font-family: "Playfair Display", serif;
+  background-color: rgba(132, 71, 79, 0.375);
+  backdrop-filter: blur(0.6px);
+  padding: 0.8rem 2.9rem;
+  border-radius: 35px;
+  border: 0.4px solid #eea47f;
+}
+@media (max-width: 440px) and (min-width: 433px) {
+  header section.hero span#line-btn {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 432px) {
+  header section.hero span#line-btn {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  header section.hero span#line-btn {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  header section.hero span#line-btn {
+    font-size: 1.4rem;
+  }
+}
+header section#about-arrow-down {
+  height: 5rem;
+  font-size: 3rem;
+  padding: 2rem auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  width: 100%;
+  margin: 3rem auto;
+  text-align: center;
+  animation: home-arrow-down 2s infinite;
+  animation-play-state: running;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 36, 36, 0.7);
+  z-index: -1;
+}
+
+/* Main Container */
+main.main-container {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: auto;
+  grid-template-areas: "l-free about r-free" "l-free edu-exp r-free" "l-free skills r-free" "l-free hobbies r-free" "l-free contact r-free" "l-free test r-free";
+}
+main.main-container section#about {
+  grid-area: about;
+  font-family: "Quicksand";
+  background-color: white;
+}
+main.main-container section#about div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#about div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#about div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#about div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#about div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#about div#content-about {
+  width: 100%;
+  padding: 4rem 0rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 1005px) {
+  main.main-container section#about div#content-about {
+    flex-flow: column nowrap;
+  }
+}
+main.main-container section#about div#content-about .left {
+  padding: 0 1rem;
+}
+main.main-container section#about div#content-about .left .profile-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.5s;
+  z-index: 0;
+}
+main.main-container section#about div#content-about .left .profile-item::after {
+  position: absolute;
+  content: "";
+  top: 4rem;
+  right: 4rem;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  z-index: -1;
+}
+main.main-container section#about div#content-about .left .profile-item:hover::after {
+  background-color: #00539c;
+  transition: all 1s;
+  color: white !important;
+}
+main.main-container section#about div#content-about .left .profile-item .social-prof-picture {
+  display: flex;
+}
+main.main-container section#about div#content-about .left .profile-item .social-prof-picture .social-media {
+  display: flex;
+  width: 5rem;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 4rem;
+  gap: 1rem;
+}
+main.main-container section#about div#content-about .left .profile-item .social-prof-picture .social-media .social-media-link {
+  font-size: 1.2rem;
+  border-radius: 100%;
+  font-weight: 500;
+  transition: 0.5s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: #00539c;
+  background-color: #fff;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+main.main-container section#about div#content-about .left .profile-item .social-prof-picture .profile-pic {
+  transition: all 1s;
+  width: 20rem;
+  height: 30rem !important;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+main.main-container section#about div#content-about .left .profile-item .name-spec {
+  padding: 0.9rem 1.5rem;
+}
+main.main-container section#about div#content-about .left .profile-item .name-spec strong {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.7rem;
+  color: #00539c;
+  transition: all 1s ease-in-out;
+}
+main.main-container section#about div#content-about .left .profile-item .name-spec strong .name-spec-font {
+  margin-right: 0.6rem;
+}
+main.main-container section#about div#content-about .right {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  vertical-align: middle;
+  width: 50%;
+  gap: 2.5rem;
+  height: 100%;
+  font-family: "Barlow Condensed", sans-serif;
+  padding: 2.8rem;
+}
+@media screen and (max-width: 1005px) {
+  main.main-container section#about div#content-about .right {
+    width: 99%;
+  }
+}
+main.main-container section#about div#content-about .right p {
+  font-size: 2rem;
+  font-family: "Oleo Script", cursive;
+  font-weight: 400;
+  font-style: italic;
+  padding: 2rem;
+  color: rgb(106, 104, 104);
+  text-align: left;
+  line-height: 1.4;
+  transition: all 1s ease-in-out;
+}
+main.main-container section#about div#content-about .right .personal-info-list {
+  font-size: 1.8rem;
+  list-style: none;
+  position: relative;
+  padding-left: 2.8rem;
+  z-index: 0;
+}
+main.main-container section#about div#content-about .right .personal-info-list li {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  transition: all 1s ease-in-out;
+}
+main.main-container section#about div#content-about .right .personal-info-list li .list-data {
+  color: rgb(106, 104, 104);
+}
+main.main-container section#about div#content-about .right .personal-info-list li .font-icon-list {
+  color: #eea47f;
+  font-size: 1.4rem;
+}
+main.main-container section#about div#content-about .right .personal-info-list li:nth-child(3) {
+  padding-left: 0.2rem;
+}
+main.main-container section#about div#content-about .right .personal-info-list li a#email:hover {
+  color: #00539c;
+}
+main.main-container section#edu-exp {
+  grid-area: edu-exp;
+  font-family: "Quicksand";
+  background-color: white;
+  background-color: rgba(246, 246, 246, 0.953);
+}
+main.main-container section#edu-exp div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#edu-exp div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#edu-exp div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#edu-exp div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#edu-exp div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#edu-exp .edu-exp-container {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side {
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  main.main-container section#edu-exp .edu-exp-container .edu-exp-side {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1.3rem;
+  }
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+  font-weight: 500;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline {
+  position: relative;
+  padding-left: 0;
+  width: 100%;
+  margin-top: 1.5rem !important;
+  padding-right: 0.5rem !important;
+  margin-bottom: 1rem;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li {
+  position: relative;
+  padding-left: 2.1rem;
+  margin-bottom: 2.1rem;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li .title {
+  width: 15rem;
+  padding: 0.5rem 1.9rem;
+  background-color: #00539c;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  border-radius: 30px 0 60px;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li .details {
+  background-color: white;
+  margin-top: 1.2rem;
+  padding: 2.1rem;
+  border-radius: 0.2rem;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li .details h5 {
+  font-size: 2rem;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li .details small {
+  display: block;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  color: #eea47f !important;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li .details p {
+  font-size: 1.6rem;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li:first-child .title {
+  background-color: #eea47f;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li:first-child::before {
+  background-color: #eea47f;
+  box-shadow: 0 0 0 2px #eea47f;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li:first-child::before .title {
+  background-color: #eea47f;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side ul.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 18px;
+  height: 18px;
+  background-color: #00539c;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+main.main-container section#edu-exp .edu-exp-container .edu-exp-side .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 2px;
+  height: 95%;
+  background-color: white;
+}
+main.main-container section#skills {
+  grid-area: skills;
+  font-family: "Quicksand";
+  background-color: white;
+}
+main.main-container section#skills div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#skills div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#skills div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#skills div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#skills div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#skills .skills-container {
+  padding: 3rem;
+}
+@media screen and (max-width: 1000px) {
+  main.main-container section#skills .skills-container {
+    padding: 1.3rem;
+  }
+}
+main.main-container section#skills .skills-container .skills {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+main.main-container section#skills .skills-container .skills .skill {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  main.main-container section#skills .skills-container .skills .skill {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1.3rem;
+  }
+}
+main.main-container section#skills .skills-container .skills .skill .individual-skill {
+  padding: 0 3rem;
+  margin-bottom: 3rem !important;
+}
+@media screen and (max-width: 1000px) {
+  main.main-container section#skills .skills-container .skills .skill .individual-skill {
+    padding: 0 1rem;
+  }
+}
+main.main-container section#skills .skills-container .skills .skill .individual-skill .individual-skill-lable {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+main.main-container section#skills .skills-container .skills .skill .individual-skill .individual-skill-lable .lable-bold {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+main.main-container section#skills .skills-container .skills .skill .individual-skill .progress {
+  display: flex;
+  height: 1.5rem;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.2rem;
+  border: 2px solid #00539c;
+}
+main.main-container section#skills .skills-container .skills .skill .individual-skill .progress .pro-bar {
+  border-radius: 10px;
+}
+main.main-container section#hobbies {
+  grid-area: hobbies;
+  font-family: "Quicksand";
+  background-color: white;
+}
+main.main-container section#hobbies div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#hobbies div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#hobbies div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#hobbies div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#hobbies div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#hobbies .hobbies-content {
+  background: url(../images/hobbies.jpg) center no-repeat fixed;
+  position: relative;
+  background-size: cover;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+}
+main.main-container section#hobbies .hobbies-content .hobbies-detail {
+  padding: 0 4rem;
+  text-align: center;
+}
+main.main-container section#hobbies .hobbies-content .hobbies-detail p {
+  position: relative;
+  color: white;
+  font-size: 3.5rem;
+  font-family: "Varela";
+  font-weight: 400;
+  line-height: 1.6;
+}
+main.main-container section#hobbies .hobbies-content .hobbies-detail p #football-icon {
+  color: #00539c;
+}
+main.main-container section#hobbies .hobbies-content .hobbies-detail p #fitness-icon {
+  color: #eea47f;
+}
+main.main-container section#hobbies .hobbies-content:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+main.main-container section#contact {
+  grid-area: contact;
+  font-family: "Quicksand";
+  background-color: white;
+}
+main.main-container section#contact div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#contact div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#contact div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#contact div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#contact div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#contact .content-form {
+  width: 100%;
+  padding: 4rem 0rem;
+  margin: 1rem auto;
+}
+main.main-container section#contact .content-form #form {
+  width: 65%;
+  margin: 2rem auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 850px) {
+  main.main-container section#contact .content-form #form {
+    width: 95%;
+  }
+}
+main.main-container section#contact .content-form #form .form-field {
+  width: 100%;
+}
+main.main-container section#contact .content-form #form .form-field label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+main.main-container section#contact .content-form #form .form-field input,
+main.main-container section#contact .content-form #form .form-field textarea {
+  width: 100%;
+  border-radius: 0.4rem;
+  border: 2px solid #eea47f;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+main.main-container section#contact .content-form #form .form-field input {
+  height: 3.5rem;
+}
+main.main-container section#contact .content-form #form .form-field .submit-btn {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  border: 2px solid white;
+  background-color: #eea47f;
+  color: white;
+}
+main.main-container section#contact .content-form #form .form-field .submit-btn:hover {
+  cursor: pointer;
+  color: #eea47f;
+  border: 2px solid #eea47f;
+  background-color: white;
+}
+main.main-container section#test {
+  grid-area: test;
+  font-family: "Quicksand";
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+main.main-container section#test div.header-style {
+  margin: 2.6rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+main.main-container section#test div.header-style h2 {
+  text-transform: uppercase;
+  color: #eea47f;
+  font-size: 2.2rem;
+  margin: 0.1rem auto;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+}
+@media screen and (max-width: 370px) {
+  main.main-container section#test div.header-style h2 {
+    font-size: 1.8rem;
+  }
+}
+main.main-container section#test div.header-style::before {
+  position: absolute;
+  margin-left: -40px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+main.main-container section#test div.header-style::after {
+  position: absolute;
+  margin-left: 30px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  background: #00539c;
+}
+
+footer {
+  grid-area: foot;
+  background-color: #00539c;
+}
+footer div.foot-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  width: 80%;
+  height: 85%;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+footer div.foot-container div.social-media-footer {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #fbeaeb;
+  display: flex;
+  gap: 2rem;
+}
+footer div.foot-container div.social-media-footer a {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer div.foot-container div.social-media-footer a span {
+  padding: 0.7rem;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 100%;
+  font-size: 2.2rem;
+}
+footer div.foot-container div.social-media-footer a span:hover {
+  background-color: #eea47f;
+  color: white;
+}
+footer div.foot-container div.nav-footer {
+  text-align: center;
+  border-bottom: 1px dashed #fbeaeb;
+  padding-bottom: 1rem;
+}
+footer div.foot-container div.nav-footer ul.navbar-menu-footer li {
+  display: inline-block;
+  border-right: 1px solid white;
+  padding: 0rem 1.2rem;
+  line-height: 2rem;
+}
+footer div.foot-container div.nav-footer ul.navbar-menu-footer li a {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+footer div.foot-container div.nav-footer ul.navbar-menu-footer li a:hover {
+  color: white;
+}
+footer div.foot-container div.nav-footer ul.navbar-menu-footer li:hover {
+  background-color: #eea47f;
+}
+footer div.foot-container div.copy-right {
+  border-bottom: 1px dashed #fbeaeb;
+}
+footer div.foot-container div.copy-right ul.copy-right-footer {
+  text-align: center;
+  line-height: 2;
+}
+footer div.foot-container div.copy-right ul.copy-right-footer li {
+  display: inline-block;
+  padding: 0px 1rem;
+}
+footer div.foot-container div.copy-right ul.copy-right-footer a {
+  text-align: center;
+  font-size: 1.5rem;
+}
+footer div.foot-container div.copy-right ul.copy-right-footer a span#name {
+  font-size: 2rem;
+  font-family: IranNastaliq, "IranNastaliq", tahoma;
+}
+footer div.foot-container div.copy-right ul.copy-right-footer li:hover a {
+  color: #eea47f;
+}
+footer div.foot-container div.link-to-top {
+  margin-top: 1rem;
+}
+footer div.foot-container div.link-to-top a span#back-to-top {
+  font-size: 1.7rem;
+  border-radius: 100%;
+  border: 1px solid white;
+  padding: 1rem 0.5rem;
+}
+
+/*# sourceMappingURL=main_style.css.map */

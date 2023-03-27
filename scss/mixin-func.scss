@@ -1,0 +1,56 @@
+// general style of the header of each sections
+@mixin header-style($area) {
+    grid-area: $area;
+    font-family: $quickSand;
+    background-color: $white;
+    @if ($area == "edu-exp") {
+        background-color: $lightgray;
+    }
+
+    div.header-style {
+        margin: 2.6rem 0;
+        padding: 1rem 0;
+        text-align: center;
+        position: relative;
+        h2 {
+            text-transform: uppercase;
+            color: $peach;
+            font-size: 2.2rem;
+            margin: 0.1rem auto;
+            width: fit-content;
+            padding: 0.4rem 0.8rem;
+            // border-bottom: 5px solid $blue;
+            @media screen and (max-width: 370px) {
+                font-size: 1.8rem;
+            }
+        }
+        &::before {
+            position: absolute;
+            margin-left: -40px;
+            content: "";
+            width: 60px;
+            height: 4px;
+            bottom: 0;
+            left: 50%;
+            background: $royalBlue;
+        }
+
+        &::after {
+            position: absolute;
+            margin-left: 30px;
+            content: "";
+            width: 4px;
+            height: 4px;
+            bottom: 0;
+            left: 50%;
+            background: $royalBlue;
+        }
+    }
+}
+
+// general style for the content of each section
+@mixin content-style {
+    width: 100%;
+    padding: 4rem 0rem;
+    margin: 1rem auto;
+}
